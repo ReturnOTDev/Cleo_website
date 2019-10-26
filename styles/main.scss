@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap");
 
-$light-green: #637c1d;
+$light-green: #6b8a4a;
 $dark-green: #273e0f;
 
 * {
@@ -115,6 +115,7 @@ button {
   transform: translateX(-50%);
   padding: 8rem;
   background: linear-gradient(top right, $light-green, $dark-green);
+  animation: colorLoop 5s ease-in-out infinite alternate-reverse;
   border-radius: 50%;
   position: relative;
   z-index: 0;
@@ -127,7 +128,7 @@ button {
     content: " ";
     background: white;
     height: 110%;
-    width: 2.5rem;
+    width: 2rem;
     top: -10%;
     left: 50%;
     z-index: 1;
@@ -139,7 +140,7 @@ button {
     content: " ";
     background: white;
     height: 110%;
-    width: 2.5rem;
+    width: 2rem;
     top: -10%;
     left: 50%;
     z-index: 1;
@@ -364,4 +365,13 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@keyframes colorLoop {
+  from {
+    background: $light-green;
+  }
+  to {
+    background: $dark-green;
+  }
 }

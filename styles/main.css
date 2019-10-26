@@ -144,8 +144,9 @@ button {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   padding: 8rem;
-  background: -webkit-gradient(linear, right top, left bottom, from(#637c1d), to(#273e0f));
-  background: linear-gradient(top right, #637c1d, #273e0f);
+  background: -webkit-gradient(linear, right top, left bottom, from(#6b8a4a), to(#273e0f));
+  background: linear-gradient(top right, #6b8a4a, #273e0f);
+  animation: colorLoop 5s ease-in-out infinite alternate-reverse;
   border-radius: 50%;
   position: relative;
   z-index: 0;
@@ -162,7 +163,7 @@ button {
   content: " ";
   background: white;
   height: 110%;
-  width: 2.5rem;
+  width: 2rem;
   top: -10%;
   left: 50%;
   z-index: 1;
@@ -177,7 +178,7 @@ button {
   content: " ";
   background: white;
   height: 110%;
-  width: 2.5rem;
+  width: 2rem;
   top: -10%;
   left: 50%;
   z-index: 1;
@@ -481,5 +482,23 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@-webkit-keyframes colorLoop {
+  from {
+    background: #6b8a4a;
+  }
+  to {
+    background: #273e0f;
+  }
+}
+
+@keyframes colorLoop {
+  from {
+    background: #6b8a4a;
+  }
+  to {
+    background: #273e0f;
+  }
 }
 /*# sourceMappingURL=main.css.map */
