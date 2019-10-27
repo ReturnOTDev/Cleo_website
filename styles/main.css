@@ -39,7 +39,7 @@ button {
 }
 
 .header-main {
-  margin-top: 4.5vh;
+  margin-top: 2vh;
   margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,9 +48,12 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-main ul {
@@ -84,22 +87,11 @@ button {
 
 .nav-bar .main-option {
   opacity: 0.6;
+  margin-left: 7rem;
 }
 
 .nav-bar .active {
   opacity: 1;
-}
-
-.nav-bar .main-option:last-of-type {
-  margin: 0;
-  position: relative;
-  z-index: 10;
-}
-
-.nav-bar .main-option:last-of-type::after {
-  content: "▼";
-  margin-left: 1rem;
-  font-size: 1.2rem;
 }
 
 .nav-bar .main-option:hover {
@@ -531,6 +523,43 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .big-gap-bottom {
-  margin-bottom: 16vh;
+  margin-bottom: 5vh;
+}
+
+.home-gallery .project-item {
+  position: relative;
+}
+
+.home-gallery .project-item p {
+  pointer-events: none;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  font-weight: bold;
+  letter-spacing: 0.25rem;
+  display: none;
+  z-index: 100;
+}
+
+.home-gallery .project-item:hover p {
+  display: initial;
+}
+
+.home-gallery .project-item:hover::after {
+  pointer-events: none;
+  content: " ";
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  opacity: 0.8;
 }
 /*# sourceMappingURL=main.css.map */
