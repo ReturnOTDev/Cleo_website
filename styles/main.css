@@ -39,7 +39,8 @@ button {
 }
 
 .header-main {
-  margin-top: 22vh;
+  margin-top: 4.5vh;
+  margin-left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,15 +48,23 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 50%;
-  margin-left: auto;
-  margin-bottom: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.header-main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.header-main ul li {
+  margin-left: 7rem;
 }
 
 .nav-bar {
@@ -66,9 +75,6 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 .nav-bar p:hover {
@@ -77,18 +83,11 @@ button {
 }
 
 .nav-bar .main-option {
-  margin-bottom: 4rem;
   opacity: 0.6;
 }
 
 .nav-bar .active {
   opacity: 1;
-}
-
-.nav-bar .main-option::after {
-  content: "●";
-  margin-left: 4rem;
-  color: #000;
 }
 
 .nav-bar .main-option:last-of-type {
@@ -99,6 +98,7 @@ button {
 
 .nav-bar .main-option:last-of-type::after {
   content: "▼";
+  margin-left: 1rem;
   font-size: 1.2rem;
 }
 
@@ -108,11 +108,12 @@ button {
 }
 
 .dropdown {
+  cursor: pointer;
   -webkit-transition: max-height 1s ease-in-out;
   transition: max-height 1s ease-in-out;
   overflow: hidden;
   position: absolute;
-  z-index: 0;
+  z-index: 100;
   margin-top: -3rem;
   padding-top: 5rem;
   -webkit-transform: translateX(-5vw);
@@ -123,6 +124,7 @@ button {
 
 .dropdown li {
   background: #273e0f;
+  text-align: center;
   padding: 1.5rem;
   font-size: 1.6rem;
   border-top: 1px solid white;
@@ -130,9 +132,8 @@ button {
 }
 
 .dropdown li a {
+  text-align: center;
   color: white;
-  width: 100%;
-  height: 100%;
 }
 
 .active {
@@ -141,15 +142,20 @@ button {
 
 .iris {
   text-align: center;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  padding: 8rem;
+  margin: 0 auto;
+  width: 35rem;
+  height: 35rem;
   background: -webkit-gradient(linear, right top, left bottom, from(#6b8a4a), to(#273e0f));
   background: linear-gradient(top right, #6b8a4a, #273e0f);
-  animation: colorLoop 5s ease-in-out infinite alternate-reverse;
   border-radius: 50%;
   position: relative;
   z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .iris .logo {
@@ -192,7 +198,6 @@ button {
 }
 
 .title {
-  margin-top: 15rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -388,6 +393,10 @@ h2 {
 }
 
 .full {
+  width: 40%;
+}
+
+.full-bigger {
   width: 50%;
 }
 
@@ -500,5 +509,28 @@ input[type="number"]::-webkit-outer-spin-button {
   to {
     background: #273e0f;
   }
+}
+
+.main .nav-bar {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.main .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .dropdown li {
+  border-right: 1px solid white;
+}
+
+.big-gap-bottom {
+  margin-bottom: 16vh;
 }
 /*# sourceMappingURL=main.css.map */

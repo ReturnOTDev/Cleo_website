@@ -36,44 +36,43 @@ button {
 // header
 
 .header-main {
-  margin-top: 22vh;
+  margin-top: 4.5vh;
+  margin-left: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  margin-left: auto;
-  margin-bottom: 0;
+  justify-content: flex-end;
+  ul {
+    display: flex;
+    flex-direction: row;
+    li {
+      margin-left: 7rem;
+    }
+  }
 }
 
 // nav
 .nav-bar {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   p:hover {
     cursor: pointer;
     opacity: 1;
   }
   .main-option {
-    margin-bottom: 4rem;
     opacity: 0.6;
   }
 
   .active {
     opacity: 1;
   }
-  .main-option::after {
-    content: "●";
-    margin-left: 4rem;
-    color: #000;
-  }
+
   .main-option:last-of-type {
     margin: 0;
     position: relative;
     z-index: 10;
     &::after {
       content: "▼";
+      margin-left: 1rem;
       font-size: 1.2rem;
     }
   }
@@ -83,10 +82,11 @@ button {
   }
 }
 .dropdown {
+  cursor: pointer;
   transition: max-height 1s ease-in-out;
   overflow: hidden;
   position: absolute;
-  z-index: 0;
+  z-index: 100;
   margin-top: -3rem;
   padding-top: 5rem;
   transform: translateX(-5vw);
@@ -94,10 +94,10 @@ button {
   max-height: 0;
   li {
     background: $dark-green;
+    text-align: center;
     a {
+      text-align: center;
       color: white;
-      width: 100%;
-      height: 100%;
     }
 
     padding: 1.5rem;
@@ -106,19 +106,23 @@ button {
     border-radius: 10px;
   }
 }
+
 .active {
   max-height: 100vh;
 }
 // iris
 .iris {
   text-align: center;
-  transform: translateX(-50%);
-  padding: 8rem;
+  margin: 0 auto;
+  width: 35rem;
+  height: 35rem;
   background: linear-gradient(top right, $light-green, $dark-green);
-  animation: colorLoop 5s ease-in-out infinite alternate-reverse;
+  // animation: colorLoop 5s ease-in-out infinite alternate-reverse;
   border-radius: 50%;
   position: relative;
   z-index: 0;
+  display: flex;
+  justify-content: center;
   .logo {
     width: 17rem;
   }
@@ -155,7 +159,6 @@ button {
 // title
 
 .title {
-  margin-top: 15rem;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -293,6 +296,9 @@ h2 {
   }
 }
 .full {
+  width: 40%;
+}
+.full-bigger {
   width: 50%;
 }
 .rotate {
@@ -374,4 +380,23 @@ input[type="number"]::-webkit-outer-spin-button {
   to {
     background: $dark-green;
   }
+}
+
+.main {
+  .nav-bar {
+    align-self: flex-end;
+  }
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    li {
+      border-right: 1px solid white;
+    }
+  }
+}
+
+// general additional classes
+
+.big-gap-bottom {
+  margin-bottom: 16vh;
 }
