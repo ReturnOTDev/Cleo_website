@@ -102,51 +102,6 @@ button {
 .active {
   max-height: 100vh;
 }
-// iris
-.iris {
-  text-align: center;
-  margin: 0 auto;
-  width: 35rem;
-  height: 35rem;
-  background: linear-gradient(top right, $light-green, $dark-green);
-  // animation: colorLoop 5s ease-in-out infinite alternate-reverse;
-  border-radius: 50%;
-  position: relative;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  .logo {
-    width: 17rem;
-  }
-  .bar-first {
-    transform: 0;
-    position: absolute;
-    content: " ";
-    background: white;
-    height: 110%;
-    width: 2rem;
-    top: -10%;
-    left: 50%;
-    z-index: 1;
-    transform: translateX(-50%) rotate(25deg);
-  }
-  .bar-second {
-    transform: 0;
-    position: absolute;
-    content: " ";
-    background: white;
-    height: 110%;
-    width: 2rem;
-    top: -10%;
-    left: 50%;
-    z-index: 1;
-    transform: translateX(-50%) rotate(-25deg);
-  }
-  .logo {
-    position: relative;
-    z-index: 2;
-  }
-}
 
 // title
 
@@ -169,29 +124,6 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: normal;
-}
-
-@keyframes open {
-  from {
-    transform: translateX(-50%) rotate(25deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(385deg);
-  }
-}
-@keyframes openO {
-  from {
-    transform: translateX(-50%) rotate(-25deg);
-  }
-  to {
-    transform: translateX(-50%) rotate(335deg);
-  }
-}
-.bar-first {
-  animation: open 1.5s ease-in-out;
-}
-.bar-second {
-  animation: openO 2s reverse ease-in-out;
 }
 
 // ABOUT PAGE
@@ -363,15 +295,6 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-@keyframes colorLoop {
-  from {
-    background: $light-green;
-  }
-  to {
-    background: $dark-green;
-  }
 }
 
 .main {
